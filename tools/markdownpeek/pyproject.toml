@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "markdownpeek"
+version = "0.1.0"
+description = "Structural explorer for Markdown files, designed for AI agents"
+requires-python = ">=3.10"
+
+[project.scripts]
+markdownpeek = "markdownpeek.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/markdownpeek"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest"]
