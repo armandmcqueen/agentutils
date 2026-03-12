@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gitro"
+version = "0.1.0"
+description = "Read-only git wrapper for AI agents"
+requires-python = ">=3.10"
+
+[project.scripts]
+gitro = "gitro.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gitro"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest"]

@@ -7,6 +7,7 @@ A monorepo of small, focused CLI tools designed for AI agents. Each tool is inde
 | Tool | Description |
 |------|-------------|
 | `markdownpeek` | Structural explorer for Markdown files |
+| `gitro` | Read-only git wrapper for AI agents |
 
 ## Usage
 
