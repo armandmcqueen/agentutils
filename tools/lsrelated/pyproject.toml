@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lsrelated"
+version = "0.1.0"
+description = "Find files frequently accessed together in Claude Code sessions"
+requires-python = ">=3.10"
+dependencies = [
+    "typer",
+    "rich",
+    "orjson",
+    "ccdata",
+]
+
+[project.scripts]
+lsrelated = "lsrelated.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lsrelated"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv.sources]
+ccdata = {path = "../../libs/ccdata"}
