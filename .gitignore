@@ -28,3 +28,4 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+tests/skill_tests/last_results.json
