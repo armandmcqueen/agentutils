@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentutils-install"
+version = "0.1.0"
+description = "Installer for agentutils CLI tools and Claude Code skills"
+requires-python = ">=3.10"
+dependencies = [
+    "typer",
+    "rich",
+]
+
+[project.scripts]
+agentutils = "agentutils_install.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentutils_install"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest"]
