@@ -12,7 +12,7 @@ app = typer.Typer(help="Install/uninstall agentutils CLI tools and Claude Code s
 console = Console()
 
 # Tools to install (relative to repo root). Excludes agentutils-install itself.
-TOOLS = ["gitro", "lsrelated", "markdownpeek"]
+TOOLS = ["gitro", "lsrelated", "markdownpeek", "textplate"]
 
 SKILLS_DIR_NAME = "skills"
 
