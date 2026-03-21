@@ -1,0 +1,13 @@
+```bash
+# Install the SDK
+pip install acme-sdk
+
+# Make your first request
+python -c "
+from acme import Client
+client = Client(api_key='pk_test_...')
+users = client.users.list(limit=5)
+for u in users:
+    print(u.email)
+"
+```
