@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "guestbook"
+version = "0.1.0"
+description = "Structured entry logging triggered by GUESTBOOK.md marker files"
+requires-python = ">=3.10"
+dependencies = [
+    "typer",
+    "rich",
+]
+
+[project.scripts]
+guestbook = "guestbook.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/guestbook"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest"]
